@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './simply-dummy.component.scss'
 })
 export class SimplyDummyComponent {
-
+  road: string = "/img/road.svg";
+  smile: string = "/img/smile.svg";
+  activites: string = "/img/Activities.png";
+  website: string = "/img/website.png";
+  focus: string = "/img/focus.png";
 }

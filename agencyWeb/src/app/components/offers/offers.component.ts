@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './offers.component.scss'
 })
 export class OffersComponent {
-    webSite: string = "/img/website.svg";
-    seo: string = "/img/seo.svg";
-    vr: string = "/img/vr.svg";
-    mobile: string = "/img/mobile.svg";
+  webSite: string = "/img/website.svg";
+  seo: string = "/img/seo.svg";
+  vr: string = "/img/vr.svg";
+  mobile: string = "/img/mobile.svg";
 }
