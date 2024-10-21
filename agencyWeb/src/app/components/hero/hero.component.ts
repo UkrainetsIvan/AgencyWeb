@@ -13,5 +13,7 @@ import {ButtonWhiteComponent} from '../button-white/button-white.component';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
-
+    man:string = "/img/man.png";
+    blue: string = "/img/blue.svg";
+    turquoise: string = "/img/turquoise.svg";
 }
