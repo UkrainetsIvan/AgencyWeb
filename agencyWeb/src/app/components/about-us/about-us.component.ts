@@ -7,6 +7,7 @@ import {OffersComponent} from './offers/offers.component';
 import {FormComponent} from '../home/form/form.component';
 import {FooterComponent} from '../home/footer/footer.component';
 import {OurTeamComponent} from './our-team/our-team.component';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-about-us',
@@ -19,7 +20,8 @@ import {OurTeamComponent} from './our-team/our-team.component';
     OffersComponent,
     FormComponent,
     FooterComponent,
-    OurTeamComponent
+    OurTeamComponent,
+    CommonModule
   ],
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.scss'

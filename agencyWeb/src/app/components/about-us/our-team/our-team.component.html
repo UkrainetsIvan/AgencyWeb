@@ -2,21 +2,26 @@
   <div id="ourTeam-container">
     <div id="ourTeam-container_slider">
       <h1 class="font-poppins font-medium text-[25px] leading-[170%]">Our Team</h1>
-      <div class="flex 0" id="ourTeam-container_slider-image_section_slides" [style.transform]="sliderTransform">
-        <div *ngFor="let slide of slides; let i = index"
-             [class.active]="i === currentSlideIndex"
-             class="slide">
-          <img [src]="slide.image" alt="" class="w-[332px] h-[281px]" id="slider-image">
-          <p class="font-poppins font-medium text-[16px] text-[#6A6A6A] leading-[211%] tracking-[1%]" id="slider-work">{{ slide.proffession }}</p>
-          <h4 class="font-poppins font-semibold text-[18px] text-[#000] leading-[211%] tracking-[1%]" id="slider-name">{{ slide.name }}</h4>
+      <div class="flex mt-[71px] overflow-hidden" id="ourTeam-container_slider-image_section_slides">
+        <div
+          class="slide"
+          *ngFor="let slide of displayedSlides; let i = index"
+          [style.transform]="sliderTransform"
+        >
+          <img [src]="slide.image" alt="" class="w-[332px] h-[281px] ml-[48px]">
+          <p class="font-poppins font-medium text-[16px] text-[#6A6A6A] ml-[48px]">{{ slide.proffession }}</p>
+          <h4 class="font-poppins font-semibold text-[18px] text-[#000] ml-[48px] w-[332px]">{{ slide.name }}</h4>
         </div>
       </div>
-      <div class="flex" id="ourTeam-container_slider-nav">
-        <div *ngFor="let slide of slides; let i = index"
-             (click)="setCurrentSlide(i)"
-             [class.active]="isActive(i)"
-             class="nav-dot"></div>
+      <div class="flex justify-center mt-4" id="ourTeam-container_slider-nav">
+        <div *ngFor="let slide of slides; let index = index"
+             class="w-[12px] h-[12px] rounded-full mx-1 cursor-pointer"
+             [ngClass]="{'bg-[#6E00FA] w-[30px] rounded-[7px]': index === currentSlideIndex, 'bg-[#C4C4C4]': index !== currentSlideIndex}"
+             (click)="goToSlide(index)">
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import {NgForOf} from '@angular/common';
+import {NgClass, NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-our-team',
   standalone: true,
   imports: [
-    NgForOf
+    NgForOf,
+    NgClass,
   ],
   templateUrl: './our-team.component.html',
   styleUrl: './our-team.component.scss'
@@ -36,24 +37,23 @@ export class OurTeamComponent {
 
   currentSlideIndex: number = 0;
 
+  displayedSlides = [...this.slides, ...this.slides];
+
   get sliderTransform(): string {
-    return `translateX(-${this.currentSlideIndex * 100}%)`;
+    const slideWidth = 332 + 48; // Width + Margin
+    return `translateX(-${this.currentSlideIndex * slideWidth}px)`;
   }
 
-  setCurrentSlide(index: number): void {
+  goToSlide(index: number): void {
     this.currentSlideIndex = index;
   }
 
-  isActive(index: number): boolean {
-    return this.currentSlideIndex === index;
-  }
-
   nextSlide(): void {
-    this.currentSlideIndex = (this.currentSlideIndex + 1) % this.slides.length;
+    this.currentSlideIndex = (this.currentSlideIndex + 1) % this.displayedSlides.length;
   }
 
   previousSlide(): void {
-    this.currentSlideIndex = (this.currentSlideIndex - 1 + this.slides.length) % this.slides.length;
+    this.currentSlideIndex = (this.currentSlideIndex - 1 + this.displayedSlides.length) % this.displayedSlides.length;
   }
 
 }
