@@ -12,4 +12,5 @@ export class OffersComponent {
   seo: string = "/img/seo.svg";
   vr: string = "/img/vr.svg";
   mobile: string = "/img/mobile.svg";
+  turquoise: string = "/img/turquoise.svg";
 }
