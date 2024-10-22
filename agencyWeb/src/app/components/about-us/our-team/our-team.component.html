@@ -1,1 +1,22 @@
-<p>our-team works!</p>
+<div id="wrapper">
+  <div id="ourTeam-container">
+    <div id="ourTeam-container_slider">
+      <h1 class="font-poppins font-medium text-[25px] leading-[170%]">Our Team</h1>
+      <div class="flex 0" id="ourTeam-container_slider-image_section_slides" [style.transform]="sliderTransform">
+        <div *ngFor="let slide of slides; let i = index"
+             [class.active]="i === currentSlideIndex"
+             class="slide">
+          <img [src]="slide.image" alt="" class="w-[332px] h-[281px]" id="slider-image">
+          <p class="font-poppins font-medium text-[16px] text-[#6A6A6A] leading-[211%] tracking-[1%]" id="slider-work">{{ slide.proffession }}</p>
+          <h4 class="font-poppins font-semibold text-[18px] text-[#000] leading-[211%] tracking-[1%]" id="slider-name">{{ slide.name }}</h4>
+        </div>
+      </div>
+      <div class="flex" id="ourTeam-container_slider-nav">
+        <div *ngFor="let slide of slides; let i = index"
+             (click)="setCurrentSlide(i)"
+             [class.active]="isActive(i)"
+             class="nav-dot"></div>
+      </div>
+    </div>
+  </div>
+</div>

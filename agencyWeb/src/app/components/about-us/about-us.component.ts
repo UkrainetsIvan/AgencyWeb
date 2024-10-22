@@ -6,6 +6,7 @@ import {SimplyDummyTextComponent} from './simply-dummy-text/simply-dummy-text.co
 import {OffersComponent} from './offers/offers.component';
 import {FormComponent} from '../home/form/form.component';
 import {FooterComponent} from '../home/footer/footer.component';
+import {OurTeamComponent} from './our-team/our-team.component';
 
 @Component({
   selector: 'app-about-us',
@@ -17,7 +18,8 @@ import {FooterComponent} from '../home/footer/footer.component';
     SimplyDummyTextComponent,
     OffersComponent,
     FormComponent,
-    FooterComponent
+    FooterComponent,
+    OurTeamComponent
   ],
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.scss'
