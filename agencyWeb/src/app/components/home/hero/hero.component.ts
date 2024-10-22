@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ButtonBlueComponent } from '../button-blue/button-blue.component';
-import {ButtonWhiteComponent} from '../button-white/button-white.component';
 import {OffersComponent} from '../offers/offers.component';
+import {ButtonBlueComponent} from '../../component/button-blue/button-blue.component';
+import {ButtonWhiteComponent} from '../../component/button-white/button-white.component';
 
 @Component({
   selector: 'app-hero',
@@ -9,7 +9,9 @@ import {OffersComponent} from '../offers/offers.component';
   imports: [
     ButtonBlueComponent,
     ButtonWhiteComponent,
-    OffersComponent
+    OffersComponent,
+    ButtonBlueComponent,
+    ButtonWhiteComponent
   ],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'

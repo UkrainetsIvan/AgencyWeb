@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-
+    facebook: string = "/img/facebook_icon.svg";
+    instagram: string = "/img/instagram.svg";
+    twitter: string = "/img/twitter.svg";
+    linkedIn: string = "/img/linkedIn.svg";
 }

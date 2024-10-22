@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
-import {ButtonBlueComponent} from '../button-blue/button-blue.component';
-import {ButtonBlueSmallComponent} from '../button-blue/button-blue-small/button-blue-small.component';
-import {ButtonWhiteSmallComponent} from '../button-white/button-white-small/button-white-small.component';
+import {ButtonBlueSmallComponent} from '../../component/button-blue/button-blue-small/button-blue-small.component';
+import {ButtonWhiteSmallComponent} from '../../component/button-white/button-white-small/button-white-small.component';
 
 @Component({
   selector: 'app-dummy',
   standalone: true,
   imports: [
-    ButtonBlueComponent,
     ButtonBlueSmallComponent,
-    ButtonWhiteSmallComponent
+    ButtonWhiteSmallComponent,
   ],
   templateUrl: './dummy.component.html',
   styleUrl: './dummy.component.scss'

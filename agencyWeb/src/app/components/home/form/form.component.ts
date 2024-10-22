@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './form.component.scss'
 })
 export class FormComponent {
-
+    star: string = "/img/smalStar.svg";
+    pai: string = "/img/pai.svg";
 }
