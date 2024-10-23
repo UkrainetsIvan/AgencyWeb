@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './statistic.component.scss'
 })
 export class StatisticComponent {
-
+  succlent: string = "/img/Succlent.svg";
+  line: string = "/img/line.svg";
+  bell: string = "/img/Bell.png";
 }

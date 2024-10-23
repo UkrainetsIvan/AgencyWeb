@@ -4,6 +4,7 @@ import {OurServicesComponent} from './our-services/our-services.component';
 import {RouterOutlet} from '@angular/router';
 import {ListServicesComponent} from './list-services/list-services.component';
 import {SimplyDummyComponent} from './simply-dummy/simply-dummy.component';
+import {StatisticComponent} from './statistic/statistic.component';
 
 @Component({
   selector: 'app-services',
@@ -13,7 +14,8 @@ import {SimplyDummyComponent} from './simply-dummy/simply-dummy.component';
     OurServicesComponent,
     RouterOutlet,
     ListServicesComponent,
-    SimplyDummyComponent
+    SimplyDummyComponent,
+    StatisticComponent
   ],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss'
