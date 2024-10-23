@@ -125,7 +125,7 @@ export class OutLaterProjectComponent {
 
     gsap.to(this.dragContent.nativeElement, {
       x: `-${totalScrollDistance}px`,
-      duration: 25,
+      duration: 30,
       ease: "none",
       repeat: -1,
       modifiers: {

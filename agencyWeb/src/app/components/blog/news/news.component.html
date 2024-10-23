@@ -1,0 +1,26 @@
+<div id="wrapper">
+  <div id="blog">
+    <div id="blog-container">
+      <div id="blog-container_news">
+        <h1 class="font-poppins font-bold text-[42px] leading-[178%] tracking-[1%] mt-[72px] ml-[590px]">Latest news</h1>
+        <h1 class="font-poppins font-bold text-[42px] text-[#1090CB] leading-[178%] tracking-[1%] mt-[43px] ml-[630px]">Updates</h1>
+        <p class="font-poppins font-medium text-[20px] text-[#777777] text-center leading-[190%] tracking-[1%] mt-[41px] ml-[504px] mr-[504px]">Lorem Ipsum is simply dummy text of the printing .</p>
+        <div class="mt-[52px] relative ml-[520px]">
+          <img [src]="search" alt="" class="absolute left-[25px] top-[17px] pointer-events-none">
+          <input type="text" placeholder="Search" class="w-[400px] h-[49px] pl-[62px] pr-4 bg-[#F1F1F1] rounded-[10px]">
+        </div>
+      </div>
+          <div class="mt-[66px] ml-[247px] flex" id="blog-container_category">
+            <div *ngFor="let title of titles; let index = index"
+                 (click)="currentSlideIndex = index"
+                 [ngClass]="{
+         'w-[162px] h-[48px] font-poppins font-regular text-[14px] leading-[178%] tracking-[1%] px-[35px] py-[12px] rounded-[30px] ml-[34px] cursor-pointer': true,
+         'bg-[#E7EFF3] text-[#1090CB]': index !== currentSlideIndex,
+         'bg-[#1090CB] text-[#fff]': index === currentSlideIndex
+       }">
+              {{ title.title }}
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
