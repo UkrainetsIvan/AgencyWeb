@@ -27,7 +27,10 @@ export class NewsComponent {
     {
       title: "Lorem ipsum "
     },
+    {
+      title: "Lorem ipsum "
+    },
   ]
 
-  currentSlideIndex: number = 0;
+  currentSlideIndex: number = 4;
 }

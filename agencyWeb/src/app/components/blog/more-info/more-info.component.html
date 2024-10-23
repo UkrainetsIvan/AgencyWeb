@@ -1,1 +1,23 @@
-<p>more-info works!</p>
+<div id="wrapper">
+  <div class="mt-[137px]" id="more-info_container">
+    <div class="flex flex-wrap">
+      <div class="w-full sm:w-1/2 md:w-1/3 p-2" *ngFor="let public of publics; let index = index">
+        <div class=" p-4"> <!-- Додайте стиль для відділення елементів, якщо потрібно -->
+          <img [src]="public.image" alt="" class="w-full h-auto">
+          <h1 class="w-[333px] font-poppins font-semibold text-[23px] leading-[178%] tracking-[1%] mt-[40px]">{{ public.title }}</h1>
+          <p class="w-[333px] font-poppins font-regular text-[16px] text-[#424242] leading-[211%] tracking-[1%]">{{ public.description }}</p>
+          <div class="flex mt-[19px]">
+            <div>
+              <img [src]="public.avatar" alt="" class="w-10 h-10 rounded-full"> <!-- Додайте стилі для зображення автора -->
+            </div>
+            <div class="ml-[21px]">
+              <h1 class="font-poppins font-medium text-[18px] leading-[211%] tracking-[1%]">{{ public.author }}</h1>
+              <p class="font-poppins font-regular text-[14px] text-[#7B7B7B] leading-[211%] tracking-[1%] -mt-[10px]">{{ public.date }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

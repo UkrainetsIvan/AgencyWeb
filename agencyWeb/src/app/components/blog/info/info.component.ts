@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './info.component.scss'
 })
 export class InfoComponent {
-
+  notebook: string = "/img/notebook.png";
+  avatar: string = "/img/avatar_4.svg";
 }
