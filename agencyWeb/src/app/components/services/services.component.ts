@@ -5,6 +5,9 @@ import {RouterOutlet} from '@angular/router';
 import {ListServicesComponent} from './list-services/list-services.component';
 import {SimplyDummyComponent} from './simply-dummy/simply-dummy.component';
 import {StatisticComponent} from './statistic/statistic.component';
+import {OutLaterProjectComponent} from './out-later-project/out-later-project.component';
+import {FormComponent} from '../home/form/form.component';
+import {FooterComponent} from '../home/footer/footer.component';
 
 @Component({
   selector: 'app-services',
@@ -15,7 +18,10 @@ import {StatisticComponent} from './statistic/statistic.component';
     RouterOutlet,
     ListServicesComponent,
     SimplyDummyComponent,
-    StatisticComponent
+    StatisticComponent,
+    OutLaterProjectComponent,
+    FormComponent,
+    FooterComponent
   ],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss'

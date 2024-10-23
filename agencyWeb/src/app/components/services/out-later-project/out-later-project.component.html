@@ -1,1 +1,24 @@
-<p>out-later-project works!</p>
+<div class="mt-[94px]">
+  <h1 class="font-poppins font-medium text-4xl leading-[178%] tracking-[1%]">Our latest Projects</h1>
+</div>
+<div #dragContent class="mt-[63px] overflow-hidden relative cursor-grab">
+  <div class="flex w-max" style="display: flex; width: max-content;">
+    <div *ngFor="let slide of slides" class="w-[333px] h-auto mx-2 flex-shrink-0 ml-[84px]">
+      <div class="w-[333px] h-auto rounded-45px">
+        <img [src]="slide.image" alt="Project Image" class="w-full h-full">
+      </div>
+      <h3 class="w-[333px] font-poppins font-semibold text-[23px] leading-[178%] tracking-[1%]">{{ slide.title }}</h3>
+      <p class="w-[333px] font-poppins font-regular text-[16px] text-[#424242] leading-[211%] tracking-[1%]">{{ slide.description }}</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
