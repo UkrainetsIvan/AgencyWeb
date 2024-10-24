@@ -1,1 +1,62 @@
-<p>hello-form works!</p>
+<div id="wrapper">
+  <div class="mt-[86px] w-full h-[830px] bg-[#E8F4FA]" id="form-container">
+    <div class="mt-[54px] ml-[505px] mr-[503px]" id="form-container_title">
+      <h1 class="font-poppins font-regular text-3xl leading-[190%] text-center">Say hello</h1>
+      <p class="font-poppins font-medium text-[13px] text-[#777777] leading-[190%] text-center">Lorem Ipsum is simply dummy text of the printing .</p>
+    </div>
+    <div id="form-container-input" [formGroup]="form">
+      <div class="flex" id="form-container-input_name">
+        <div class="ml-[385px] mt-[79px]" id="form-container-input_name-firstName">
+          <label class="font-poppins font-medium text-[14px] text-[#4F4F4F] leading-[175%] -tracking-[0.3%]">First Name (Ім'я)</label>
+          <label class="text-red-500" *ngIf="getError(form.get('firstName'))">
+            {{ getError(form.get('firstName')) }}
+          </label>
+          <div>
+            <input type="text" class="w-[322px] h-[56px] rounded-[9px] pl-[20px]"
+                   formControlName="firstName"
+                   [ngClass]="{'border-red-500': form.get('firstName')?.invalid && form.get('firstName')?.touched}">
+          </div>
+        </div>
+        <div class="ml-[27px] mt-[79px]" id="form-container-input_name-lastName">
+          <label class="font-poppins font-medium text-[14px] text-[#4F4F4F] leading-[175%] -tracking-[0.3%]">Last Name (Прізвище)</label>
+          <label class="text-red-500" *ngIf="getError(form.get('lastName'))">
+            {{ getError(form.get('lastName')) }}
+          </label>
+          <div>
+            <input type="text" class="w-[322px] h-[56px] rounded-[9px] pl-[20px]"
+                   formControlName="lastName"
+                   [ngClass]="{'border-red-500': form.get('lastName')?.invalid && form.get('lastName')?.touched}">
+          </div>
+        </div>
+      </div>
+      <div class="ml-[385px] mt-[48px]" id="form-container-input_email">
+        <label class="font-poppins font-medium text-[14px] text-[#4F4F4F] leading-[175%] -tracking-[0.3%]">Email Address (Електрона пошта)</label>
+        <label class="text-red-500" *ngIf="getError(form.get('email'))">
+          {{ getError(form.get('email')) }}
+        </label>
+        <div>
+          <input type="email" class="w-[671px] h-[56px] rounded-[9px] pl-[30px]"
+                 formControlName="email"
+                 [ngClass]="{'border-red-500': form.get('email')?.invalid && form.get('email')?.touched}">
+        </div>
+      </div>
+      <div class="ml-[385px] mt-[48px]" id="form-container-input_message">
+        <label class="font-poppins font-medium text-[14px] text-[#4F4F4F] leading-[175%] -tracking-[0.3%]">Message (Повідомлення)</label>
+        <label class="text-red-500" *ngIf="getError(form.get('message'))">
+          {{ getError(form.get('message')) }}
+        </label>
+        <div>
+          <input type="text" class="w-[671px] h-[232px] rounded-[9px]"
+                 formControlName="message"
+                 [ngClass]="{'border-red-500': form.get('message')?.invalid && form.get('message')?.touched}">
+        </div>
+      </div>
+      <div *ngIf="successMessage" class="text-green-500 text-center mt-[10px]">
+        {{ successMessage }}
+      </div>
+      <div class="mt-[57px] ml-[863px]" id="form-container-input_submitBtn">
+        <button type="submit" class="w-[193px] h-[51px] bg-[#1090CB] font-poppins font-regular text-[16px] text-[#fff] leading-[204%] rounded-[10px]" (click)="submitForm()">Get in touch</button>
+      </div>
+    </div>
+  </div>
+</div>
