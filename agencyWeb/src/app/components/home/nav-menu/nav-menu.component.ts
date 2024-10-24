@@ -13,11 +13,5 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
   styleUrl: './nav-menu.component.scss'
 })
 export class NavMenuComponent {
-   checker: boolean = true;
-   currentPage: boolean = true;
 
-   toggleActivePage(): void {
-     this.currentPage === !this.currentPage
-     console.log(this.currentPage)
-   }
 }
