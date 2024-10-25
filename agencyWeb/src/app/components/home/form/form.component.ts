@@ -13,6 +13,8 @@ import {NgIf} from '@angular/common';
   styleUrl: './form.component.scss'
 })
 export class FormComponent {
+  successMessage: string = '';
+
     star: string = "/img/smalStar.svg";
     pai: string = "/img/pai.svg";
 
@@ -36,6 +38,19 @@ export class FormComponent {
         emailError:true
       }
     else return null;
+  }
+
+  submitForm() {
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+    } else {
+      this.successMessage = 'Ви підписалися, очікуйте повідомлень!';
+
+      setTimeout(() => {
+        this.form.reset();
+        this.successMessage = '';
+      }, 3000);
+    }
   }
 
   constructor() { }

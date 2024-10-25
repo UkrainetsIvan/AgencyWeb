@@ -5,13 +5,16 @@
     <h1 class="absolute mt-[148px] ml-[461px] w-[516px] h-[91px] font-poppins font-semibold text-[30px] text-center text-[#252525] leading-[170%]">Lorem Ipsum is simply dummy text of the printing.</h1>
     <div class="absolute mt-[319px] ml-[360px]" id="form" [formGroup]="form" >
       <input type="email" placeholder="Enter your email" class="w-[532px] h-[67px] pl-[36px] font-poppins font-regular text-[16px] text-[#787878] leading-[170%] rounded-[10px]" formControlName="email">
-      <button type="submit" class="w-[173px] h-[67px] ml-[13px] font-poppins font-medium text-[16px] text-[#fff] leading-[170%] bg-[#000] rounded-[10px] uppercase">Subscribe</button>
+      <button type="submit" class="w-[173px] h-[67px] ml-[13px] font-poppins font-medium text-[16px] text-[#fff] leading-[170%] bg-[#000] rounded-[10px] uppercase" (click)="submitForm()">Subscribe</button>
       <div>
         <label class="text-red-500" id="text-danger" *ngIf="getError(form.get('email'))">
           {{
             getError(form.get('email'))
           }}
         </label>
+      </div>
+      <div *ngIf="successMessage" class="text-green-500 text-center mt-[10px]">
+        {{ successMessage }}
       </div>
     </div>
   </div>
