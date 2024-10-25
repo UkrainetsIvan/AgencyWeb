@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { AboutUsComponent } from './about-us.component';
+import { AboutUsComponent } from './about-us.component'; // Ваш компонент
+import { ActivatedRoute } from '@angular/router'; // Імпортуйте ActivatedRoute
+import { of } from 'rxjs'; // Імпортуйте of з rxjs
 
 describe('AboutUsComponent', () => {
   let component: AboutUsComponent;
@@ -8,10 +9,19 @@ describe('AboutUsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AboutUsComponent]
-    })
-    .compileComponents();
+      imports: [AboutUsComponent], // Зміна з declarations на imports
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            params: of({ id: 1 }) // Приклад мок-даних
+          }
+        }
+      ]
+    }).compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(AboutUsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -21,3 +31,4 @@ describe('AboutUsComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
