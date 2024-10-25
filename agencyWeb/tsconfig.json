@@ -2,7 +2,7 @@
 /* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "compilerOptions": {
-    "target": "es2020",
+    "target": "es6",
     "module": "esnext",
     "moduleResolution": "node",
     "skipLibCheck": true,
