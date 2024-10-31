@@ -41,7 +41,7 @@ export class HelloFormComponent {
     else return null;
   }
 
-  submitForm() {
+  submitForm():void {
     if (this.form.invalid) {
       this.form.markAllAsTouched();
     } else {
